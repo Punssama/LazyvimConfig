@@ -1,6 +1,6 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- aDD ANY ADDITIONAL KEYMAPS HERE
 
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
@@ -49,6 +49,9 @@ keymap.set("n", "<C-w>down", "<C-w>-")
 --diagnostics
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
+end)
+keymap.set("n", "<C-k>", function()
+  vim.diagnostic.goto_prev()
 end)
 
 --save
